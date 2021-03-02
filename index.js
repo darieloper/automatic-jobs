@@ -12,9 +12,9 @@ app.get('/hello', (req, resp) => {
 
 const scrapyQueue = new Queue('scrapy', {
     redis: {
-        host: 'redis-16748.c14.us-east-1-2.ec2.cloud.redislabs.com',
-        port: 16748,
-        password: 'COlQJB3bLM5bCETqt7cEdxkcnUlAwk54'        
+        host: process.env.REDIS_HOST,
+        port: process.env.REDIS_PORT,
+        password: process.env.REDIS_PSW        
     }
 })
 

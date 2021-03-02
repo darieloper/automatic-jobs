@@ -2,9 +2,13 @@
   "dependencies": {
     "bull": "^3.20.1",
     "bull-board": "^1.4.1",
-    "bullmq": "^1.14.7"
+    "bullmq": "^1.14.7",
+    "cheerio": "^1.0.0-rc.5",
+    "dotenv": "^8.2.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "node -r dotenv/config index.js",
+    "scrapy": "node -r dotenv/config scrapy.js"
   }
 }
